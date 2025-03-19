@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/akmake_website/static/css/main.4599fb76.css",
-    "main.js": "/akmake_website/static/js/main.10e83b5e.js",
+    "main.js": "/akmake_website/static/js/main.3c1af0c3.js",
     "static/js/453.d986a160.chunk.js": "/akmake_website/static/js/453.d986a160.chunk.js",
     "static/media/about_us1.jpg": "/akmake_website/static/media/about_us1.3271574ff1a39ad9ff62.jpg",
     "static/media/about_us.jpg": "/akmake_website/static/media/about_us.7ac9f80b55e3dde3fc58.jpg",
@@ -12,11 +12,11 @@
     "static/media/pro.png": "/akmake_website/static/media/pro.b8649d7082f0ebb3cc8d.png",
     "index.html": "/akmake_website/index.html",
     "main.4599fb76.css.map": "/akmake_website/static/css/main.4599fb76.css.map",
-    "main.10e83b5e.js.map": "/akmake_website/static/js/main.10e83b5e.js.map",
+    "main.3c1af0c3.js.map": "/akmake_website/static/js/main.3c1af0c3.js.map",
     "453.d986a160.chunk.js.map": "/akmake_website/static/js/453.d986a160.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4599fb76.css",
-    "static/js/main.10e83b5e.js"
+    "static/js/main.3c1af0c3.js"
   ]
 }
