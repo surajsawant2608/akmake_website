@@ -2,6 +2,8 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import logo from "../logo.png";
+import React from "react";
+
 
 const navigation = [
   { name: "Home", path: "/" },
@@ -15,62 +17,65 @@ const navigation = [
 
 export default function Navbar() {
   return (
-      <Disclosure as="nav" className="bg-white border-gray-200 dark:bg-gray-900">
+    <Disclosure
+      as="nav"
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/30 shadow-lg border-b border-white/50"
+    >
       {({ open }) => (
         <>
-          <div className="w-screen ml-[20px] flex flex-wrap items-center justify-between mx-auto p-4">
-            {/* Logo on the left */}
-            <div className="flex items-center space-x-2 rtl:space-x-reverse">
-              <img src={logo} alt="Logo" className="h-9" />
-              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
+          <div className="w-full flex items-center justify-between px-6 py-4">
+            {/* Logo */}
+            <div className="flex items-center space-x-2">
+              <img src={logo} alt="Logo" className="h-12" />
+              <span className="text-xl font-semibold text-black"></span>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <DisclosureButton className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                <span className="sr-only">Open main menu</span>
-                {open ? (
-                  <XMarkIcon className="w-5 h-5" aria-hidden="true" />
-                ) : (
-                  <Bars3Icon className="w-5 h-5" aria-hidden="true" />
-                )}
-              </DisclosureButton>
-            </div>
-
-            {/* Navigation Links - Desktop */}
-            <div className="hidden w-full mr-[30px] md:block md:w-auto">
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                {navigation.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      to={item.path}
-                      className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Mobile Menu */}
-          <DisclosurePanel className="md:hidden">
-            <div className="flex flex-col space-y-2 mt-2">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-6">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="px-4 py-2 rounded-lg transition relative text-white hover:shadow-lg hover:text-orange-500"
+                  className="text-black font-medium hover:text-orange-600 transition"
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <DisclosureButton className="p-2 rounded-md text-black hover:bg-black/10 focus:ring-1 focus:ring-slate-500">
+                {open ? (
+                  <XMarkIcon className="w-3 h-3 font-bold" aria-hidden="true" />
+                ) : (
+                  <Bars3Icon className="w-3 h-3 font-bold" aria-hidden="true" />
+                )}
+              </DisclosureButton>
+            </div>
+          </div>
+
+          {/* Mobile Menu (Dropdown) */}
+          <DisclosurePanel as={React.Fragment}>
+            {({ close }) => (
+              <div className="md:hidden absolute top-16 left-0 w-full bg-white/90 backdrop-blur-lg shadow-lg border border-white/50 rounded-lg p-4">
+                <div className="flex flex-col space-y-2">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      onClick={() => close()}
+                      className="px-4 py-2 rounded-lg text-black hover:text-orange-500"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </DisclosurePanel>
         </>
       )}
     </Disclosure>
-
   );
 }

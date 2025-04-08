@@ -25,6 +25,7 @@ export default function Products() {
               alt="Fabric Cutting Machine"
               className="w-full h-auto object-cover rounded-xl shadow-xl"
             />
+          
           </div>
         </div>
 

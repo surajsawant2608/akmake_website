@@ -31,7 +31,7 @@ export default function ContactUs() {
     if (!validateForm()) return;
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("http://localhost:5000/add-data", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -61,28 +61,41 @@ export default function ContactUs() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29385.628617607425!2d72.69187660673614!3d22.979540287053734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e62b7acb97ed1%3A0x31edea5b0c476693!2sBakrol%20Bujrang%2C%20Gujarat%20382433!5e0!3m2!1sen!2sin!4v1742359769648!5m2!1sen!2sin"
             style={{ filter: "grayscale(1) contrast(1.2) opacity(0.7)" }} // Corrected style syntax
           ></iframe>
-          <div className="bg-white relative flex flex-wrap py-4 sm:py-6 rounded shadow-md text-sm sm:text-base w-full sm:w-2/3">
+          <div className="w-full max-w-full sm:max-w-sm sm:mt-10 md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto bg-white relative flex flex-wrap py-4 sm:py-6 rounded shadow-md text-sm sm:text-base">
             <div className="w-full sm:w-1/2 px-4 sm:px-6">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs sm:text-sm">ADDRESS</h2>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs sm:text-sm">
+                ADDRESS
+              </h2>
               <p className="mt-1 text-xs sm:text-base">
                 AKMAKE ENGINEERING, 50 Nandanvan IND Estate, Village Bakrol Bujrang Daskrol, AHMEDABAD, GUJARAT, 382430.
               </p>
             </div>
+
             <div className="w-full sm:w-1/2 px-4 sm:px-6 mt-2 sm:mt-0">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs sm:text-sm">EMAIL</h2>
-              <a className="text-red-500 leading-relaxed text-xs sm:text-base">akmakesales@gmail.com</a>
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs sm:text-sm mt-2 sm:mt-4">PHONE</h2>
-              <p className="leading-relaxed text-xs sm:text-base">+91 9558832129</p>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs sm:text-sm">
+                EMAIL
+              </h2>
+              <a href="mailto:akmakesales@gmail.com" className="text-red-500 leading-relaxed text-xs sm:text-base block break-words">
+                akmakesales@gmail.com
+              </a>
+
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs sm:text-sm mt-2 sm:mt-4">
+                PHONE
+              </h2>
+              <p className="leading-relaxed text-xs sm:text-base">
+                +91 9558832129
+              </p>
             </div>
           </div>
+
         </div>
-        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <div className="lg:w-1/3 lg:px-8 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 px-8 mt-8 md:mt-0">
         <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Get in Touch with Us</h2>
           <p className="leading-relaxed mb-5 text-gray-600">We’ll help you find the perfect product for your needs.</p>
 
           <form onSubmit={handleSubmit}>
             {/* Name Input */}
-            <div className="relative mb-4">
+            <div className="relative mb-4 ">
               <label className="leading-7 text-sm text-gray-600">Name</label>
               <input
                 type="text"

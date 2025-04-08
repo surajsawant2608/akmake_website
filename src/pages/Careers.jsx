@@ -11,7 +11,14 @@ const jobList = [
     location: "Gujarat, India",
     description: "We need a machine specialist with expertise in industrial operations and maintenance.",
   },
+  {
+    "title": "Industrial Technician",
+    "location": "Gujarat, India",
+    "description": "We are looking for an Industrial Technician skilled in troubleshooting, repairing, and maintaining machinery to ensure smooth operations in our facility."
+  },
 ];
+
+
 
 export default function JobBoard() {
   // const [jobs, setJobs] = useState(jobList);
@@ -34,13 +41,37 @@ export default function JobBoard() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (applicant.name && applicant.email && applicant.resume) {
-      alert(`Application submitted successfully!\nName: ${applicant.name}\nEmail: ${applicant.email}`);
-      setApplicant({ name: "", email: "", resume: null });
-    } else {
+    
+    if (!applicant.name || !applicant.email || !applicant.resume) {
       alert("Please fill in all fields and upload a valid resume.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("name", applicant.name);
+    formData.append("email", applicant.email);
+    formData.append("phone", "546548144");
+
+    console.log(formData);
+
+    try {
+      const response = await fetch("http://localhost:5000/add-data", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert("Application submitted successfully!");
+        setApplicant({ name: "", email: "", phone:""});
+      } else {
+        alert("Failed to submit application.");
+      }
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      alert("An error occurred. Please try again.");
     }
   };
 
