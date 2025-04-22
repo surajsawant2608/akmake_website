@@ -2,9 +2,13 @@ import React from 'react';
 // import Carousel from '../components/Carousel';
 import images from '../utils/importImages';
 import backgroundImage from '../styles/images/home_img/blue_laser.jpg';
-import product1 from '../styles/images/product_img/pro.png';
-import product2 from '../styles/images/product_img/pro2.png';
-// import { CheckCircleIcon } from "@heroicons/react/20/solid";
+import pro from '../styles/images/product_img/factory_worker.jpg';
+import manufacturing from '../styles/images/product_img/high_quality_man.jpg';
+import product2 from '../styles/images/product_img/industry_expert.jpg';
+import satisfaction from '../styles/images/home_img/satisfaction.png';
+import reasonable from '../styles/images/home_img/reasonable_rate.png';
+import timeEfficiency from '../styles/images/home_img/time_efficiency.png';
+import latest_machinery from '../styles/images/home_img/latest_machinery.png';
 
 const Home = () => {
   const imageUrls = [
@@ -19,36 +23,27 @@ const Home = () => {
   const services = [
     {
       title: 'High-Quality Manufacturing',
-      image: product1,
+      image: manufacturing,
       description: 'We specialize in producing top-grade industrial finishing machines for FIBC, PP woven sacks, and plastic woven fabric industries.'
     },
     {
       title: 'Latest Technology',
-      image: product2,
+      image: pro,
       description: 'Our state-of-the-art machines are designed to enhance production efficiency with the latest technology.'
     },
     {
       title: 'Industry Expertise',
-      image: product1,
+      image: product2,
       description: 'With over a decade of experience, we understand customer needs and deliver customized, high-performance solutions.',
       // details: 'Our jowar flour is also a good source of protein and fiber...'
     },
-    {
-      title: 'Customer Support',
-      image: product2,
-      description: 'We serve global FIBC customers with premium machinery and reliable technical support...',
-      // details: 'We serve global FIBC customers with premium machinery and reliable technical support...'
-    },
-    {
-      title: 'High-Quality Manufacturing',
-      image: product1,
-      description: 'We specialize in producing top-grade industrial finishing machines for FIBC, PP woven sacks, and plastic woven fabric industries.'
-    },
-    {
-      title: 'High-Quality Manufacturing',
-      image: product1,
-      description: 'We specialize in producing top-grade industrial finishing machines for FIBC, PP woven sacks, and plastic woven fabric industries.'
-    },
+    // {
+    //   title: 'Customer Support',
+    //   image: product1,
+    //   description: 'We serve global FIBC customers with premium machinery and reliable technical support...',
+    //   // details: 'We serve global FIBC customers with premium machinery and reliable technical support...'
+    // },
+    
     // {
     //   title: 'Flavoured Spaghetti',
     //   image: 'https://images.unsplash.com/photo-1556910110-a5a63dfd393c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmF3JTIwc3BhZ2hldHRpfGVufDB8fDB8fHww',
@@ -68,19 +63,19 @@ const Home = () => {
   const whyUs = [
     {
       title: 'Latest Machinery',
-      image: 'https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp'
+      image: latest_machinery,
     },
     {
       title: 'Reasonable Rates',
-      image: 'https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp'
+      image: reasonable,
     },
     {
       title: 'Time Efficiency',
-      image: 'https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp'
+      image: timeEfficiency,
     },
     {
       title: 'Customer Satisfaction',
-      image: 'https://image3.jdomni.in/banner/13062021/EB/99/EE/8B460...'
+      image: satisfaction,
     }
   ];
 
@@ -116,31 +111,78 @@ const Home = () => {
       </section>
 
       {/* Our Services Section */}
-      <section className="py-10" id="services">
+      <section className="py-20" id="services">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">Our Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className={`bg-white rounded-lg shadow-md overflow-hidden ${service.special ? 'bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5' : ''}`}>
-                {service.special && <div className="text-center text-white font-medium">Special product</div>}
-                <img src={service.image} alt={service.title} className="w-full h-64 object-cover rounded-t-lg" />
-                <div className="p-6 bg-white text-center rounded-b-lg">
-                  <h3 className="text-xl font-medium text-gray-800 mb-2">{service.title}</h3>
-                  <p className="text-gray-700 text-base">
-                    {service.description}
+              <div
+                key={index}
+                className={`relative group bg-white rounded-lg shadow-md overflow-hidden ${
+                  service.special ? 'bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5' : ''
+                }`}
+              >
+                {/* Special tag */}
+                {service.special && (
+                  <div className="text-center text-white font-medium absolute z-10 bg-black bg-opacity-50 w-full py-2 top-0">
+                    Special product
+                  </div>
+                )}
+
+                {/* Image */}
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-64 object-cover rounded-t-lg"
+                />
+
+                {/* Title (always visible) */}
+                <div className="bg-white text-center p-4">
+                  <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
+                </div>
+
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-white bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center px-4">
+                  <div className="text-black text-center">
+                    <p className="text-sm md:text-base lg:text-lg">{service.description}</p>
                     {service.details && (
-                      <details>
-                        <summary>Read More</summary>
-                        <p>{service.details}</p>
+                      <details className="mt-2 text-sm md:text-base lg:text-lg">
+                        <summary className="cursor-pointer underline">Read More</summary>
+                        <p className="mt-1">{service.details}</p>
                       </details>
                     )}
-                  </p>
+                  </div>
                 </div>
+
               </div>
             ))}
           </div>
         </div>
       </section>
+
+
+
+      {/* <div class="relative group bg-gray-200 h-[400px]] shadow-lg rounded-2xl overflow-hidden">
+          <img class="w-full h-full group-hover:h-64 object-cover rounded-2xl transition-all delay-150 duration-300 ease" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/f014625e-1a1d-4944-8395-46a07841a794/JORDAN+SPIZIKE+LOW.png" />
+          <div class="bg-gray-100 w-full h-40 absolute left-0 bottom-0 -mb-44 group-hover:mb-0 rounded-b-2xl transition-all delay-150 duration-300 ease dark:bg-gray-700">
+            <div class="p-6">
+              <div class="capitalize flex items-center justify-between gap-4">
+                <div>
+                  <h2 class="text-red-600 text-lg font-bold">jordan spizike low</h2>
+                  <p class="dark:text-gray-100">men's shoes</p>
+                </div>
+                <div>
+                <p class="text-3xl font-bold dark:text-gray-100">$160</p>
+                </div>
+              </div>
+              <div class="block mt-4">
+                <div class="absolute bottom-2 left-5">
+                  <button class="bg-red-600 text-gray-100 font-medium py-2.5 px-4 rounded-xl opacity-90 hover:opacity-100">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
 
       {/* About Us Section */}
       <section className="bg-gray-100" id="aboutus">
@@ -148,12 +190,9 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="max-w-lg">
               <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">About Us</h2>
-              <p className="mt-4 text-gray-600 text-lg">
-              Delivering high-quality industrial finishing machines worldwide.
-              Established in 2025 and based in Ahmedabad, we are India's leading providers of high-quality industrial finishing machines and spare parts. Our solutions have earned trust in 66+ international markets, including Latin & North America, Indonesia, Russia, North & South Africa, and beyond.
-At AKMAKE, we don’t just deliver machines – we deliver excellence, reliability, and long-term partnerships. We continue to expand our global presence, ensuring superior performance and reliability for industries worldwide,
-Join hands with us to experience world-class finishing solutions tailored to your industry’s needs.
-              </p>
+              <p className="mt-4 text-gray-900 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-4xl mx-auto px-4 text-justify">
+  Delivering high-quality industrial finishing machines worldwide. We are India's leading providers of high-quality industrial finishing machines and spare parts. Our solutions have earned trust in India and international markets, including Latin & North America, Indonesia, Russia, North & South Africa, Saudi Arabia, Algeria and beyond. At AKMAKE, we don’t just deliver machines – we deliver excellence, reliability, and long-term partnerships. We continue to expand our global presence, ensuring superior performance and reliability for industries worldwide. Join hands with us to experience world-class finishing solutions tailored to your industry’s needs.
+</p>
             </div>
             <div className="mt-12 md:mt-0">
               <img
