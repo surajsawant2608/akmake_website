@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/akmake_website/static/css/main.9155dc3f.css",
-    "main.js": "/akmake_website/static/js/main.5282b8de.js",
+    "main.css": "/akmake_website/static/css/main.9a35564d.css",
+    "main.js": "/akmake_website/static/js/main.4c208e4e.js",
     "static/js/453.d986a160.chunk.js": "/akmake_website/static/js/453.d986a160.chunk.js",
     "static/media/factory_worker.jpg": "/akmake_website/static/media/factory_worker.a6aecd99c1382689453c.jpg",
     "static/media/about_us1.jpg": "/akmake_website/static/media/about_us1.3271574ff1a39ad9ff62.jpg",
@@ -22,12 +22,12 @@
     "static/media/latest_machinery.png": "/akmake_website/static/media/latest_machinery.61def46be60380f899c8.png",
     "static/media/test_mac.jpeg": "/akmake_website/static/media/test_mac.fd507d28fc5b5b7f31c9.jpeg",
     "index.html": "/akmake_website/index.html",
-    "main.9155dc3f.css.map": "/akmake_website/static/css/main.9155dc3f.css.map",
-    "main.5282b8de.js.map": "/akmake_website/static/js/main.5282b8de.js.map",
+    "main.9a35564d.css.map": "/akmake_website/static/css/main.9a35564d.css.map",
+    "main.4c208e4e.js.map": "/akmake_website/static/js/main.4c208e4e.js.map",
     "453.d986a160.chunk.js.map": "/akmake_website/static/js/453.d986a160.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9155dc3f.css",
-    "static/js/main.5282b8de.js"
+    "static/css/main.9a35564d.css",
+    "static/js/main.4c208e4e.js"
   ]
 }
