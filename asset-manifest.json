@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/akmake_website/static/css/main.274fbab5.css",
-    "main.js": "/akmake_website/static/js/main.251a8a93.js",
+    "main.css": "/akmake_website/static/css/main.9155dc3f.css",
+    "main.js": "/akmake_website/static/js/main.5282b8de.js",
     "static/js/453.d986a160.chunk.js": "/akmake_website/static/js/453.d986a160.chunk.js",
     "static/media/factory_worker.jpg": "/akmake_website/static/media/factory_worker.a6aecd99c1382689453c.jpg",
     "static/media/about_us1.jpg": "/akmake_website/static/media/about_us1.3271574ff1a39ad9ff62.jpg",
@@ -10,23 +10,24 @@
     "static/media/bagcleaner.png": "/akmake_website/static/media/bagcleaner.bdb743eb4ef1351bf3fb.png",
     "static/media/image1.png": "/akmake_website/static/media/image1.fb89e9316e660447bef2.png",
     "static/media/industry_expert.jpg": "/akmake_website/static/media/industry_expert.5ad5b4eea79fc647fe3c.jpg",
+    "static/media/welding.jpg": "/akmake_website/static/media/welding.e3acbb7d5c8b922fc402.jpg",
     "static/media/high_quality_man.jpg": "/akmake_website/static/media/high_quality_man.d47d597e2f191b79148f.jpg",
     "static/media/blue_laser.jpg": "/akmake_website/static/media/blue_laser.c624a78c1823e02215ff.jpg",
     "static/media/background.png": "/akmake_website/static/media/background.6ba4316e159eb5a1f09d.png",
     "static/media/logo.png": "/akmake_website/static/media/logo.bf30f578fcbdf8d41b6a.png",
-    "static/media/pro.png": "/akmake_website/static/media/pro.b8649d7082f0ebb3cc8d.png",
     "static/media/satisfaction.png": "/akmake_website/static/media/satisfaction.636b356779554dc13518.png",
     "static/media/reasonable_rate.png": "/akmake_website/static/media/reasonable_rate.e52b80bde72ba26964f7.png",
     "static/media/time_efficiency.png": "/akmake_website/static/media/time_efficiency.0a8dd354c130c5a29bf7.png",
+    "static/media/withlogo.png": "/akmake_website/static/media/withlogo.211bfdc8fe7146ccf94d.png",
     "static/media/latest_machinery.png": "/akmake_website/static/media/latest_machinery.61def46be60380f899c8.png",
     "static/media/test_mac.jpeg": "/akmake_website/static/media/test_mac.fd507d28fc5b5b7f31c9.jpeg",
     "index.html": "/akmake_website/index.html",
-    "main.274fbab5.css.map": "/akmake_website/static/css/main.274fbab5.css.map",
-    "main.251a8a93.js.map": "/akmake_website/static/js/main.251a8a93.js.map",
+    "main.9155dc3f.css.map": "/akmake_website/static/css/main.9155dc3f.css.map",
+    "main.5282b8de.js.map": "/akmake_website/static/js/main.5282b8de.js.map",
     "453.d986a160.chunk.js.map": "/akmake_website/static/js/453.d986a160.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.274fbab5.css",
-    "static/js/main.251a8a93.js"
+    "static/css/main.9155dc3f.css",
+    "static/js/main.5282b8de.js"
   ]
 }
