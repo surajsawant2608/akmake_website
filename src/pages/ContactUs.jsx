@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -11,8 +12,16 @@ export default function ContactUs() {
 
   // Handle Input Change
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" });
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      const numericValue = value.replace(/[^0-9]/g, ""); // Remove non-digits
+      setFormData({ ...formData, [name]: numericValue });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+
+    setErrors({ ...errors, [name]: "" });
   };
 
   // Validate Form Data
@@ -20,7 +29,13 @@ export default function ContactUs() {
     let newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits";
+    }
     if (!formData.message.trim()) newErrors.message = "Message is required";
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -31,15 +46,16 @@ export default function ContactUs() {
     if (!validateForm()) return;
 
     try {
-      const response = await fetch("http://localhost:5000/add-data", {
+      const response = await fetch("https://akmake.in/submit.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
+      const result = await response.text(); // for plain text
+      console.log("Server Response:", result);
       if (response.ok) {
         alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
         alert("Failed to send message!");
       }
@@ -105,6 +121,19 @@ export default function ContactUs() {
                 className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-gray-700 py-1 px-3 outline-none"
               />
               {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
+            </div>
+
+            {/* Phone Input */}
+            <div className="relative mb-4 ">
+              <label className="leading-7 text-sm text-gray-600">Contact No</label>
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-gray-700 py-1 px-3 outline-none"
+              />
+              {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
             </div>
 
             {/* Email Input */}
