@@ -1,9 +1,9 @@
 import React from "react";
-import lineropenermachine from "../styles/images/product_img/lineropenermachine.png";
+import lineropenermachine from "../../styles/images/product_img/lineropenermachine.png";
 
 export default function Products() {
   return (
-    <section class="w-screen pt-[80px] sm:pt-[120px] md:pt-[160px] lg:pt-[175px] pb-[140px] overflow-hidden bg-white py-8 sm:py-16">
+    <section className="w-screen pt-[80px] sm:pt-[90px] md:pt-[130px] lg:pt-[155px] pb-[140px] overflow-hidden bg-white py-8 sm:py-16">
   <div class="mx-auto max-w-7xl px-6 lg:px-8 mb-20">
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:gap-y-16 md:max-w-none md:grid-cols-2 items-center">
 
@@ -54,7 +54,6 @@ export default function Products() {
       </div>
     </div>
   </div>
-</section>
-
+    </section>
   );
 }

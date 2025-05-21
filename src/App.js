@@ -9,7 +9,15 @@ import RnD from "./pages/RnD";
 import Careers from "./pages/Careers";
 import PrivacyPolicies from "./pages/PrivacyPolicies";
 import ContactUs from "./pages/ContactUs";
-import Background from "./components/Background";
+import LinerOpener from "./pages/products/LinerOpener";
+import FIBCBagCleaning from "./pages/products/FIBCBagCleaning";
+import BafflePunching from "./pages/products/BafflePunching";
+import HydraulicBalePress from "./pages/products/HydraulicBalePress";
+import BeltCutting from "./pages/products/BeltCutting";
+import AutoForming from "./pages/products/AutoFormFit";
+import JumboBag from "./pages/products/JumboBagFabricCutting";
+
+// import Background from "./components/Background";
 
 const App = () => {
   return (
@@ -23,6 +31,13 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/products/liner_opener" element={<LinerOpener />} />
+            <Route path="/products/fibcbagcleaning" element={<FIBCBagCleaning />} />
+            <Route path="/products/bafflepunching" element={<BafflePunching />} />
+            <Route path="/products/hydaulicbalepress" element={<HydraulicBalePress />} />
+            <Route path="/products/beltcutting" element={<BeltCutting />} />
+            <Route path="/products/autoforming" element={<AutoForming />} />
+            <Route path="/products/jumbobagfabriccutting" element={<JumboBag />} />
             <Route path="/rnd" element={<RnD />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/careers" element={<Careers />} />

@@ -1,5 +1,4 @@
 import React from 'react';
-// import Carousel from '../components/Carousel';
 import images from '../utils/importImages';
 import backgroundImage from '../styles/images/home_img/welding.jpg';
 import pro from '../styles/images/product_img/factory_worker.jpg';
