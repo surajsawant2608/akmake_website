@@ -29,7 +29,7 @@ export default function About() {
             </p>
 
             <p className="mt-4 text-xl text-gray-600 dark:text-black-300 md:mt-8">
-              👉 Join hands with us to experience <span className="text-indigo-700 underline">world-class finishing solutions</span> tailored to your industry’s needs.
+              👉 Join hands with us to experience world-class finishing solutions tailored to your industry’s needs.
             </p>
           </div>
 

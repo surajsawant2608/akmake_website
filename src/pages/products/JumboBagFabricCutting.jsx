@@ -1,75 +1,45 @@
 import React from "react";
+import ProductCard from "../../components/ProductCard";
 export default function Products() {
   return (
-    <section className="w-screen pt-[80px] sm:pt-[90px] md:pt-[130px] lg:pt-[155px] pb-[140px] overflow-hidden bg-white py-8 sm:py-16">
-    <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-20">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:gap-y-16 md:max-w-none md:grid-cols-1 items-center">
-        <div className="md:pr-8">
-          <div className="md:max-w-3xl">
-            <p className="mt-2 text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
-              Jumbo Bag Fabric Cutting Machine
-            </p>
-
-            <p className="mt-4 text-sm leading-6 text-gray-600">
-              <strong>Model:</strong> 2200 FCM with Baffle Punching System
-            </p>
-
-            <p className="mt-6 text-sm leading-6 text-gray-600 font-medium">Cutting Types & Sizes</p>
-            <ul className="mt-2 text-sm text-gray-600 leading-5 space-y-1 list-disc list-inside">
-              <li><strong>I-Cut:</strong> 500 mm, 600 mm, 650 mm</li>
-              <li><strong>O-Cut:</strong> 300 mm, 350 mm, 400 mm, 450 mm, 500 mm</li>
-              <li><strong>X-Cut:</strong> 300 mm, 350 mm, 400 mm, 450 mm</li>
-            </ul>
-
-            <p className="mt-6 text-sm leading-6 text-gray-600 font-medium">Advanced Features</p>
-            <ul className="mt-2 text-sm text-gray-600 leading-5 space-y-1 list-disc list-inside">
-              <li>Automatic Endage Folding for precise folding</li>
-              <li>Ultrasonic Welding for seamless, durable joints</li>
-              <li>Baffle Panel: 2 sets (1 set = 5 nos)</li>
-            </ul>
-
-            <p className="mt-6 text-sm leading-6 text-gray-600 font-medium">Automation & Control</p>
-            <ul className="mt-2 text-sm text-gray-600 leading-5 space-y-1 list-disc list-inside">
-              <li>Automatic Web Guide Hydraulic System for precise alignment</li>
-              <li>Accumulator System for tension control & accuracy</li>
-              <li>Operating System: Schneider or Fuji PLC-based system</li>
-            </ul>
-
-            <p className="mt-6 text-sm leading-6 text-gray-600 font-medium">Specifications</p>
-            <p className="mt-2 text-sm text-gray-600 leading-5">
-              This advanced Fabric Cutting Machine ensures precision cutting and punching of FIBC fabrics,
-              optimizing efficiency and quality. Built to deliver high-speed performance with durability,
-              it's ideal for bulk bag manufacturing needs.
-            </p>
-
-            <p className="mt-6 text-sm leading-6 text-gray-600 font-medium">Key Features</p>
-            <ul className="mt-2 text-sm text-gray-600 leading-5 space-y-1 list-disc list-inside">
-              <li>Cutting Width: 2200mm, suitable for U-panel, circular, & 4-panel FIBC bags</li>
-              <li>Hot Knife Cutting Mechanism: Cuts & seals simultaneously, preventing fraying</li>
-              <li>High-Speed Operation: 17-20 cuts per minute for increased production</li>
-              <li>PLC-Controlled System: User-friendly, stores presets for various fabric types</li>
-              <li>Servo Motor Drive: Ensures precise movement & reduces material wastage</li>
-              <li>Auto Roll Feeding System: Automatic unwinder with tension control</li>
-              <li>Edge Position Control (EPC): Ensures straight, aligned cutting</li>
-              <li>Perforation & Marking: Supports easy folding, stitching, & branding</li>
-              <li>Length Accuracy: ±10mm, handles 200mm - 3500mm fabric lengths</li>
-              <li>Safety Features: Emergency stop buttons, blade guards & warning systems</li>
-              <li>Energy Efficiency: Low power consumption for continuous operation</li>
-            </ul>
-
-            <p className="mt-6 text-sm leading-6 text-gray-600 font-medium">Applications</p>
-            <ul className="mt-2 text-sm text-gray-600 leading-5 space-y-1 list-disc list-inside">
-              <li>Cutting fabrics for standard, coated, or uncoated FIBC bags</li>
-              <li>Manufacturing cross-corner loops, side-seam loops, or liner-integrated bags</li>
-            </ul>
-
-            <p className="mt-6 text-sm leading-6 text-gray-600">
-              This machine combines modern automation with robust construction to enhance fabric processing for jumbo bag production.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <ProductCard
+      title="JUMBO BAG FABRIC CUTTING MACHINE – 1400 FCM"
+      subheader={
+        <>
+          <strong>Precision | Power | Performance</strong><br />
+          Designed for FIBC bag manufacturers, this machine delivers high-precision cutting for PP/HDPE woven sack fabrics – tubular or flat, laminated or unlaminated.
+        </>
+      }
+      specs={[
+        ['Machine Type', 'Woven Sack FIBC Bag Cutting Machine'],
+        ['Max. Fabric Width', '1400 mm'],
+        ['Fabric Types Supported', 'PP/HDPE – Tubular/Flat, Laminated/Unlaminated'],
+        ['Max. Fabric Roll Diameter', '2000 mm'],
+        ['Max. Fabric Roll Weight', '1000 kg'],
+        ['Cutting Length Range', '200 mm to 35,000 mm'],
+        ['Production Speed', 'Up to 22 cuts/min (without Spout), 17 cuts/min (with Spout/Cross)'],
+        ['Cutting Accuracy', '±10 mm'],
+        ['Machine Speed', 'Up to 70 meters/min'],
+        ['Power Requirement', 'Air Compressor – 3 HP (customer end)']
+      ]}
+      features={[
+        'Hot Knife Cutting for clean, sealed edges',
+        'Servo Motor Control for precise, repeatable cutting',
+        'PLC-Controlled Interface (Fuji/Schneider) with preset storage',
+        '"O" & "X" Die Cuts for various profile requirements',
+        'Hydraulic/EPC Web Guide System for aligned fabric unwinding',
+        'Pneumatic Hand for fabric roll lifting',
+        'Compact and space-efficient design',
+        'Integrated safety features: blade guards, emergency stops'
+      ]}
+      optionalFeatures={[
+        'Endage Folding & Ultrasonic Stitching',
+        'Hot Baffle Punching',
+        '"I" Cut & "U" Cut',
+        'Cold Cutter for Laminated Fabric'
+      ]}
+      applications="Cutting standard or coated/uncoated woven fabrics for FIBC bags. Supports U-panel, circular, and 4-panel bag production. Ideal for bags with cross-corner loops, side-seam loops, or integrated liners."
+      contactCta="Ready to enhance your FIBC production with the 1400 FCM System?"
+    />
   );
 }

@@ -16,6 +16,8 @@ import HydraulicBalePress from "./pages/products/HydraulicBalePress";
 import BeltCutting from "./pages/products/BeltCutting";
 import AutoForming from "./pages/products/AutoFormFit";
 import JumboBag from "./pages/products/JumboBagFabricCutting";
+import JumboBag2200 from "./pages/products/JumboBagFabricCutting2200";
+import JumboBagWithBaffle from "./pages/products/JumboBagFabricWithBaffle";
 
 // import Background from "./components/Background";
 
@@ -38,6 +40,8 @@ const App = () => {
             <Route path="/products/beltcutting" element={<BeltCutting />} />
             <Route path="/products/autoforming" element={<AutoForming />} />
             <Route path="/products/jumbobagfabriccutting" element={<JumboBag />} />
+            <Route path="/products/jumbobagfabriccutting2200" element={<JumboBag2200 />} />
+            <Route path="/products/jumbobagfabricwithbaffle" element={<JumboBagWithBaffle />} />
             <Route path="/rnd" element={<RnD />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/careers" element={<Careers />} />

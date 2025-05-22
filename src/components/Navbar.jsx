@@ -11,21 +11,24 @@ import React from "react";
 // Navigation with children
 const navigation = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
   {
     name: "Products",
     children: [
-      { name: "Liner Opener", path: "/products/liner_opener" },
-      { name: "FIBC Bag Cleaning", path: "/products/fibcbagcleaning" },
-      { name: "Baffle Punching Machine", path: "/products/bafflepunching" },
+      { name: "FIBC Liner Opener", path: "/products/liner_opener" },
+      { name: "FIBC Bag Cleaning Machine", path: "/products/fibcbagcleaning" },
+      { name: "FIBC Baffle Punch Machine", path: "/products/bafflepunching" },
       { name: "Hydraulic Bale Press", path: "/products/hydaulicbalepress" },
       { name: "Belt Cutting Machine", path: "/products/beltcutting" },
       { name: "Auto Form Fit Machine", path: "/products/autoforming" },
-      { name: "Jumbo Bag Fabric Cutting", path: "/products/jumbobagfabriccutting" },
+      { name: "Jumbo Bag Fabric Cutting Machine - 1400 FCM", path: "/products/jumbobagfabriccutting" },
+      { name: "Jumbo Bag Fabric Cutting Machine - 2200 FCM", path: "/products/jumbobagfabriccutting2200" },
+      { name: "Jumbo Bag Fabric Cutting Machine with Baffle Punch", path: "/products/jumbobagfabricwithbaffle" },
+      
     ],
   },
+  { name: "About", path: "/about" },
   { name: "Contact Us", path: "/contact-us" },
-  { name: "Careers", path: "/careers" },
+  // { name: "Careers", path: "/careers" },
 ];
 
 export default function Navbar() {
