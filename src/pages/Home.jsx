@@ -8,6 +8,7 @@ import satisfaction from '../styles/images/home_img/satisfaction.png';
 import reasonable from '../styles/images/home_img/reasonable_rate.png';
 import timeEfficiency from '../styles/images/home_img/time_efficiency.png';
 import latest_machinery from '../styles/images/home_img/latest_machinery.png';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const imageUrls = [
@@ -97,12 +98,11 @@ const Home = () => {
             <p className="font-regular text-white text-lg mb-8 mt-4">
               Transforming Your Vision into Reality with Cutting Edge Automation
             </p>
-            <a
-              href="/contact-us"
+            <Link to="/contact-us"
               className="px-6 py-3 bg-[#c8a876] text-white font-small rounded-full hover:bg-[#c09858] transition duration-200"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>
