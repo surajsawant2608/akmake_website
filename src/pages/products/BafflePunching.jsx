@@ -12,6 +12,7 @@ export default function Products() {
           </>
         }
         specs={[
+          ['Adjustable Punching Distance', 'Programmable: Min 25 mm to 500+ mm'],
           ['Max. Width of Unwinding Cloth', '750 mm'],
           ['Tension Control', 'Accumulator'],
           ['Machine Control', 'PLC & Servo Control (Fuji/Schneider)'],

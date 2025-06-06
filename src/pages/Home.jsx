@@ -98,7 +98,7 @@ const Home = () => {
               Transforming Your Vision into Reality with Cutting Edge Automation
             </p>
             <a
-              href="#/contact-us"
+              href="/contact-us"
               className="px-6 py-3 bg-[#c8a876] text-white font-small rounded-full hover:bg-[#c09858] transition duration-200"
             >
               Contact Us
@@ -110,7 +110,7 @@ const Home = () => {
       {/* Services Section */}
       <section className="py-20" id="services">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-10 text-center">Our Services</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-10 text-center">Our Products</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {/* Service Card */}
             {[

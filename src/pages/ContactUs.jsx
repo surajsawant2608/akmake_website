@@ -91,8 +91,8 @@ export default function ContactUs() {
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs sm:text-sm">
                 EMAIL
               </h2>
-              <a href="mailto:akmakesales@gmail.com" className="text-red-500 leading-relaxed text-xs sm:text-base block break-words">
-                akmakesales@gmail.com
+              <a href="mailto:contact@akmake.in" className="text-red-500 leading-relaxed text-xs sm:text-base block break-words">
+                contact@akmake.in
               </a>
 
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs sm:text-sm mt-2 sm:mt-4">

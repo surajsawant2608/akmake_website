@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -33,15 +33,15 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/products/liner_opener" element={<LinerOpener />} />
-            <Route path="/products/fibcbagcleaning" element={<FIBCBagCleaning />} />
-            <Route path="/products/bafflepunching" element={<BafflePunching />} />
-            <Route path="/products/hydaulicbalepress" element={<HydraulicBalePress />} />
-            <Route path="/products/beltcutting" element={<BeltCutting />} />
-            <Route path="/products/autoforming" element={<AutoForming />} />
-            <Route path="/products/jumbobagfabriccutting" element={<JumboBag />} />
-            <Route path="/products/jumbobagfabriccutting2200" element={<JumboBag2200 />} />
-            <Route path="/products/jumbobagfabricwithbaffle" element={<JumboBagWithBaffle />} />
+            <Route path="/products/liner-opener-machine" element={<LinerOpener />} />
+            <Route path="/products/fibc-bag-cleaning" element={<FIBCBagCleaning />} />
+            <Route path="/products/fibc-baffle-punch-machine" element={<BafflePunching />} />
+            <Route path="/products/hydaulic-bale-press" element={<HydraulicBalePress />} />
+            <Route path="/products/fibc-belt-cutting" element={<BeltCutting />} />
+            <Route path="/products/auto-form-fit-machine" element={<AutoForming />} />
+            <Route path="/products/jumbo-bag-fabric-cutting" element={<JumboBag />} />
+            <Route path="/products/jumbo-bag-fabric-cutting-2200" element={<JumboBag2200 />} />
+            <Route path="/products/jumbo-bag-fabric-with-baffle" element={<JumboBagWithBaffle />} />
             <Route path="/rnd" element={<RnD />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/careers" element={<Careers />} />

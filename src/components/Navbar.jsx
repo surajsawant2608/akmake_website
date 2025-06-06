@@ -14,15 +14,15 @@ const navigation = [
   {
     name: "Products",
     children: [
-      { name: "FIBC Liner Opener", path: "/products/liner_opener" },
-      { name: "FIBC Bag Cleaning Machine", path: "/products/fibcbagcleaning" },
-      { name: "FIBC Baffle Punch Machine", path: "/products/bafflepunching" },
-      { name: "Hydraulic Bale Press", path: "/products/hydaulicbalepress" },
-      { name: "Belt Cutting Machine", path: "/products/beltcutting" },
-      { name: "Auto Form Fit Machine", path: "/products/autoforming" },
-      { name: "Jumbo Bag Fabric Cutting Machine - 1400 FCM", path: "/products/jumbobagfabriccutting" },
-      { name: "Jumbo Bag Fabric Cutting Machine - 2200 FCM", path: "/products/jumbobagfabriccutting2200" },
-      { name: "Jumbo Bag Fabric Cutting Machine with Baffle Punch", path: "/products/jumbobagfabricwithbaffle" },
+      { name: "FIBC Liner Opener", path: "/products/liner-opener-machine" },
+      { name: "FIBC Bag Cleaning Machine", path: "/products/fibc-bag-cleaning" },
+      { name: "Automatic FIBC Baffle Punching/Cutting Machine", path: "/products/fibc-baffle-punch-machine" },
+      { name: "Hydraulic Bale Press Machine", path: "/products/hydaulic-bale-press" },
+      { name: "Belt Cutting Machine", path: "/products/fibc-belt-cutting" },
+      { name: "Auto Form Fit Machine (PE Bottle Shape Liner Sealing Machine)", path: "/products/auto-form-fit-machine" },
+      { name: "Jumbo Bag Fabric Cutting Machine - 1400 FCM", path: "/products/jumbo-bag-fabric-cutting" },
+      { name: "Jumbo Bag Fabric Cutting Machine - 2200 FCM", path: "/products/jumbo-bag-fabric-cutting-2200" },
+      { name: "Jumbo Bag Fabric Cutting Machine with Baffle Punch", path: "/products/jumbo-bag-fabric-with-baffle" },
       
     ],
   },
@@ -42,8 +42,10 @@ export default function Navbar() {
           <div className="w-full flex items-center justify-between px-6 py-4">
             {/* Logo */}
             <div className="flex items-center space-x-2">
+              <a href="/">
               <img src={logo} alt="Logo" className="h-12" />
               <span className="text-xl font-semibold text-black"></span>
+              </a>
             </div>
 
             {/* Desktop Navigation */}
@@ -68,7 +70,7 @@ export default function Navbar() {
                         />
                       </svg>
                     </button>
-                    <div className="absolute z-10 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-lg min-w-[180px]">
+                    <div className="absolute z-10 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-lg min-w-[250px] max-h-[70vh] sm:max-h-[60vh] md:max-h-[85vh] overflow-y-auto">
                       <div className="p-2 space-y-1">
                         {item.children.map((child) => (
                           <Link
@@ -109,14 +111,14 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <DisclosurePanel as={React.Fragment}>
             {({ close }) => (
-              <div className="md:hidden absolute top-16 left-0 w-full bg-white/90 backdrop-blur-lg shadow-lg border border-white/50 rounded-lg p-4">
+              <div className="md:hidden absolute top-16 left-0 w-full bg-white/90 backdrop-blur-lg shadow-lg border border-white/50 rounded-lg p-4 max-h-[85vh] overflow-y-auto">
                 <div className="flex flex-col space-y-2">
                   {navigation.map((item) =>
                     item.children ? (
                       <Disclosure key={item.name} as="div" className="w-full">
                         {({ open: subOpen }) => (
                           <>
-                            <DisclosureButton className="w-full flex justify-between items-center px-4 py-2 text-left text-black hover:text-orange-600 font-medium rounded-lg">
+                            <DisclosureButton className="w-full flex justify-between items-center px-4 py-2 text-left text-black hover:text-orange-600 font-medium rounded-lg min-w-[250px] max-h-[70vh] sm:max-h-[60vh] md:max-h-[85vh] overflow-y-auto">
                               {item.name}
                               <ChevronDownIcon
                                 className={`w-4 h-4 transition-transform ${

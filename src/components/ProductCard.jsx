@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductSection = ({
   title,
@@ -80,9 +81,9 @@ const ProductSection = ({
         <section className="mt-10 mb-10 text-center">
           <h2 className="text-2xl font-semibold mb-4">📞 Contact Us Today</h2>
           <p className="text-lg mb-4">{contactCta}</p>
-          <a href="#/contact-us" class="mt-2 rounded-md bg-indigo-600 px-3 py-2 text-xl font-medium text-white shadow-sm hover:bg-indigo-500">
-              Enquiry Now
-          </a>
+          <Link to="/contact-us" className="mt-2 rounded-md bg-indigo-600 px-3 py-2 text-xl font-medium text-white shadow-sm hover:bg-indigo-500">
+            Enquiry Now
+          </Link>
         </section>
       )}
     </div>
